@@ -1,0 +1,13 @@
+﻿'exercise2.exe': Loaded 'C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\exercise2\Debug\exercise2.exe', Symbols loaded.
+'exercise2.exe': Loaded 'C:\Windows\SysWOW64\ntdll.dll', Cannot find or open the PDB file
+'exercise2.exe': Loaded 'C:\Windows\SysWOW64\kernel32.dll', Cannot find or open the PDB file
+'exercise2.exe': Loaded 'C:\Windows\SysWOW64\KernelBase.dll', Cannot find or open the PDB file
+'exercise2.exe': Loaded 'C:\Windows\SysWOW64\apphelp.dll', Cannot find or open the PDB file
+'exercise2.exe': Loaded 'C:\Windows\SysWOW64\msvcp100d.dll', Symbols loaded.
+'exercise2.exe': Loaded 'C:\Windows\SysWOW64\msvcr100d.dll', Symbols loaded.
+'exercise2.exe': Loaded 'C:\Windows\SysWOW64\sechost.dll', Cannot find or open the PDB file
+'exercise2.exe': Loaded 'C:\Windows\SysWOW64\rpcrt4.dll', Cannot find or open the PDB file
+The thread 'Win32 Thread' (0x26c4) has exited with code 0 (0x0).
+The thread 'Win32 Thread' (0x2034) has exited with code 0 (0x0).
+The thread 'Win32 Thread' (0x1e50) has exited with code 0 (0x0).
+The program '[10352] exercise2.exe: Native' has exited with code 0 (0x0).
