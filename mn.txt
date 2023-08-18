@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+int main() {
+    char menu;
+    float balance = 0.0, money;
+    do{
+        cout << "1. Deposit \n";
+        cout << "2. Withdrawn \n";
+        cout << "3. Balance \n";
+        cout << "0. Exit \n";
+        cout << "Plese Input Menu : ";
+        cin >> menu;
+        if(menu == '1')
+        {
+            cout<<"Welcome to Deposit\n";
+            cout<<"Input Amount : ";
+            cin>>money;
+            balance = balance + money; //balance
+        }else if(menu == '2')
+        {
+            cout<<"Welcome to Withdrawn\n";
+            cout<<"Input Amount : ";
+            cin>>money;
+            if (money > balance) cout << "Money not enough";
+            else balance = balance - money; //balance
+        }else if(menu == '3')
+        {
+            cout<<"Welcome to Check Balance\n";
+            cout<<balance <<endl; //balance
+        }else if(menu == '0')
+        {   
+            cout<<"******Exit*****\n";
+        }else{
+            cout<<"You input wrong menu!!\n";
+        }
+    }while(menu != '0');
+    return 0;
+}
