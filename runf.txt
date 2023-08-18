@@ -1,0 +1,42 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main() {
+    string username,password,userL;
+    char menu;
+    do{
+        cout << "1. Register\n";
+        cout << "2. Login\n";
+        cout << "Q. Exit Program\n";
+        cout << "Please Input Username : ";
+        cin >> username;
+        cout << "Plaese Input Password : ";
+        cin >> password;
+        if(menu == '1')
+        {   cout<<"Input Username : ";
+            cin>>username;
+            cout<<"Input Password : ";
+            cin>>password;
+        }else if(menu == '2')
+        case '2':
+        {
+            do
+            {   string user,pass;
+                cout<<"Input username :";
+                cin>>user;
+                cout<<"Input password :";
+                cin>>pass;
+                if((username == user)&&(password
+                    ==pass))
+                { cout <<"Login Success"<<endl;
+                }else
+                { cout <<"Login Failed"<<endl;
+                }
+            }while((username!=user)||(password!=pass));
+        }else if(menu == 'Q')
+        {
+            cout<<"*****Exit*****\n";
+        }
+    }while(menu != 'Q');
+    return 0;
+}
