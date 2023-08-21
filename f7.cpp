@@ -4,20 +4,23 @@
 #include<iomanip>
 using namespace std;
 int main()
-{	string S = "Microsoft Visual Studio.Net";
-    cout <<S.length()<<endl;
-	cout <<S.size()<<endl;
-	cout <<S.c_str()<<endl;
-	cout <<S.at(15)<<endl;
-	S.append("2010");
-	for(int i=0;i<S.length();i++)
-	{	cout<<S.at(i)<<"-";
+{	int num,score,max=0,sum=0;
+    float avg;
+	srand(time(NULL));
+	num = 1+rand()%10;
+	cout <<"Random number : "<< num <<endl;
+	for(int i=1; i<=10;i++)
+	{	cout << "Input Score " <<i<<":";
+		cin >> score;
+		if(score>max) 
+		{	max = score;
+		}
+		sum = sum=score;
 	}
-	cout<<endl;
-	cout<<S.substr(10,6)<<endl;
-	cout<<S.find('s')<<endl;
-	S.replace(10,6,"C++");
-	cout<<S<<endl;
+	avg = sum/num;
+	cout << "Max score = " <<max<<endl;
+	cout << "Sum score = " <<sum<<endl;
+	cout << "Avg. score = " <<fixed<<setprecision(2)<<avg<<endl;
     system("pause");
     return(0);
 }
