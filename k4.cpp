@@ -3,7 +3,6 @@
 using namespace std;
 void ParseName(string &FirstName,string &LastName, const string FullName);
 void check_Char(string FirstName);
-void check_Char(string LastName);
 int main()
 {
 	string Name = "Stroustrup, Bjarne";
