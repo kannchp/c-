@@ -6,7 +6,7 @@ void DisplayMenu();
 float Area(const float Radius);
 float Area(const float Length, const float Widht);
 float Area(const float Base, const double Height);
-float Area(const double W1 , const double W2 , const double Height);
+float Area(const double L1 , const double L2 , const double Height);
 int main()
 {
 	char Choice;
@@ -39,11 +39,11 @@ int main()
 				cout << endl;
 			}
 		else if (Choice == '4'){
-				double W1,W2,Height;
-				cout << "Enter W1 , W2 and H : ";
-				cin >> W1 >> W2 >> Height;
+				double L1,L2,Height;
+				cout << "Enter L1 , L2 and H : ";
+				cin >> L1 >> L2 >> Height;
 				cout << "Area of Trapezoid = " << fixed;
-				cout << setprecision(2) << Area(W1,W2,Height);
+				cout << setprecision(2) << Area(L1,L2,Height);
 				cout << endl;
 			}
 		else if (Choice == '5') Flag = false;
@@ -68,9 +68,9 @@ float Area(const float Base, const double Height)
 		return(0.5 * Base * Height);
 
 }
-float Area(const double W1 , const double W2 , const double Height)
+float Area(const double L1 , const double L2 , const double Height)
 {
-		return(0.5 * (W1 + W2) * Height);
+		return(0.5 * (L1 + L2) * Height);
 }
 void DisplayMenu()
 {
