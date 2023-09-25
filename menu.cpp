@@ -49,7 +49,7 @@ void Input(int &numS,int quiz[10],int mid[10],int final[10])
 		cin>>quiz[i];
 		cout<<"Input Midterm: ";
 		cin>>mid[i];
-		cout<<"Input Finail: ";
+		cout<<"Input Final: ";
 		cin>>final[i];
 		cout<<endl;
 	}
@@ -81,10 +81,12 @@ void Viewid(int &numS,int quiz[10],int mid[10],int final[10])
 		cout<<"-----------------------------------"<<endl;
 		cout<<i+1<<setw(9)<<quiz[i]<<setw(9)<<mid[i]<<setw(9)<<final[i]<<endl;
 		cout<<"-----------------------------------"<<endl;
-		}else
+		}
+		else
 		{
 			cout<<"Your ID is not found"<<endl;
 		}
+		break;
 	}
 
 }
