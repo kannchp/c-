@@ -8,7 +8,7 @@ void AddStudent(string FN);
 void DisplayStudent(string FN);
 int main()
 {
-	const string Filename = "student.dat";
+	const string Filename = "liststudent1.dat";
 	ifstream InFile;
 	ofstream OutFile;
 	int c;
@@ -47,13 +47,16 @@ void AddStudent(string FN)
 	ofstream OutFile(FN.c_str(), ios_base::out | ios_base::app);
 	if (OutFile.is_open()) {
 		string Id, Name;
+		int score;
 		cout << "\n Add Student \n";
 		cout << "Enter id : ";
 		cin >> Id;
 		cout << "Enter name : ";
 		cin >> Name;
+		cout << "Enter score : ";
+		cin >> score;
 		// write data to file student.dat
-		OutFile << Id << " " << Name << endl;
+		OutFile << Id << " " << Name << " " << score <<endl;
 		OutFile.close();
 		char Wait;
 		cin.get(Wait);
@@ -67,20 +70,27 @@ void DisplayStudent(string FN)
 	ifstream InFile(FN.c_str(), ios_base::in); // open file for read
 	if (InFile.is_open()) {
 		string Id, Name;
-		string line(30,'=');
+		int score;
+		string line(40,'=');
 		int n = 0;
 		cout << "\nList Student\n";
 		cout << line << endl;
-		cout << " No. Id Name \n";
+		cout << " No. Id \t Name \t Score\t Grade\n";
 		cout << line << endl;
 		// read data from file student.dat
-		InFile >> Id >> Name;
+		InFile >> Id >> Name>> score;
+		char grade;
 		while (!InFile.eof()) {
 			n = n + 1;
+			if(score>=80) grade = 'A';
+			else if(score>=70) grade = 'B';
+			else if(score>=60) grade = 'C';
+			else if(score>=50) grade = 'D';
+			else grade = 'F';
 			cout << right << setw(3) << n << " : ";
 			cout << left << setw(6) << Id;
-			cout << " " << Name << endl;
-			InFile >> Id >> Name;
+			cout << "\t" << Name <<"\t"<<score<<"\t"<<grade<<endl;
+			InFile >> Id >> Name >> score;
 		}
 		InFile.close();
 		char Wait;
